@@ -1,33 +1,13 @@
 import express from "express";
+// import {movieRoutes} from './routes/movies.route.js'
 
 const PORT = 3000;
 const app = express();
 
-// app.use()
+// app.use('/movies', movieRoutes)
 
 app.get("/",(req, res) => {
   res.json({msg: "Create Method"})
-})
-
-// CRUD functionalities of Movies
-// R - Reading
-app.get('/movies', (req, res) => {
-  
-})
-
-// C - Create
-app.post('/movies', (req, res) => {
-  
-})
-
-// U - Update
-app.put('/movies/:id', (req, res) => {
-  
-})
-
-// D - Delete
-app.delete('/movies/:id', (req, res) => {
-  
 })
 
 app.listen(PORT, () => {
