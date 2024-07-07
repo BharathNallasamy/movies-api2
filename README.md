@@ -19,3 +19,7 @@
 2. `git commit -m "additional messsage"`
 3. `git pull -> To pull the changes from the Repo`
 4. `git push -> Push the latest code to the Repo`
+
+### Database Options
+1. SQL -> (MYSQL, MariaDB, Postgres, etc...)
+2. NoSQL -> (MongoDB, etc...)
