@@ -1,15 +1,24 @@
+import TamilMovies from "../models/movie.model.js";
+
 export const GetAllMovies = (req, res) => {
-  //  
+  // 
 };
 
 export const Get_a_Movies = (req, res) => {
   res.send("Get a Single Movie...");
 };
 
-export const CreateMovie = (req, res) => {
-//   res.send("Create a Movie...");
-  console.log(req.body)
-  return res.json(req.body)
+export const CreateMovie = async (req, res) => {
+  const newMovie = new TamilMovies({
+    title: req.body.title,
+    year: req.body.year
+  })
+  try {
+    const movie = await newMovie.save()
+    return res.status(201).json(movie)
+  } catch (error) {
+    return res.status(400).json({ message: error.message })
+  }
 };
 
 export const UpdateMovie = (req, res) => {
