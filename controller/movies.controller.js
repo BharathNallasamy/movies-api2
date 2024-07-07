@@ -1,5 +1,5 @@
 export const GetAllMovies = (req, res) => {
-  res.send("Get all Movie...");
+  //  
 };
 
 export const Get_a_Movies = (req, res) => {
@@ -7,7 +7,9 @@ export const Get_a_Movies = (req, res) => {
 };
 
 export const CreateMovie = (req, res) => {
-  res.send("Create a Movie...");
+//   res.send("Create a Movie...");
+  console.log(req.body)
+  return res.json(req.body)
 };
 
 export const UpdateMovie = (req, res) => {
