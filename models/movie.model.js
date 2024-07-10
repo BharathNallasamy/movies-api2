@@ -2,8 +2,15 @@ import { Schema, model } from "mongoose";
 
 // Writing a Schema
 const schema = new Schema({
-  title: String,
-  year: Number
+  title: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  year: {
+    type: Number,
+    required: true,
+  }
 })
 
 // Creating a Model
